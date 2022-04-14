@@ -50,7 +50,14 @@ public NexusEmploye findAllEmployeById(Integer id) throws NexusException {
 	return nexusEmploye;
 
 }
-
+@Override 
+	public void deactivateNexusEmploye(integer id){
+		Optional<NexusEmploye> nexusEmplOPtional=nexusRepository.findById(id);
+		if(nexusEmplOPtional.isPresent()){
+		NexusEmploye nexemp=nexusEmplOPtional.get();
+		nexusRepository.save(nexemp);
+		}
+	}
 }
 
 	
