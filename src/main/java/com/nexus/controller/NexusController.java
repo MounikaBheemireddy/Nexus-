@@ -30,9 +30,5 @@ private NexusService nexusService;
 		NexusEmploye nexusEmploye=nexusService.findAllEmployeById(id); 
 		return nexusEmploye;
 	}
-	@PostMapping("/deactive")
-	public String deactiveNexusEmploye(@RequestParam Integer id)
-	{
-	nexusService.deactiveNexusEmploye(id);
-		return "Sucess";
+	
 	}
